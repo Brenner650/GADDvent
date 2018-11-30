@@ -1,0 +1,100 @@
+class CfgNetworkMessages
+{
+	// GADDVent
+	class spawnGADDVentVehicleRequest
+	{
+		module = "gaddvent";
+		parameters[] =
+		{
+			"STRING",
+			"STRING"
+		};
+	};
+	class spawnGADDVentVehicleResponse
+	{
+		module = "gaddvent";
+		parameters[] =
+		{
+			"SCALAR",
+			"STRING"
+		};
+	};
+	class getGADDVentNumber
+	{
+		module = "gaddvent";
+		parameters[] =
+		{
+			"STRING"
+		};
+	};
+	class updateGADDVentNumber
+	{
+		module = "gaddvent";
+		parameters[] =
+		{
+			"SCALAR",
+			"STRING"
+		};
+	};
+	class receiveNumber
+	{
+		module = "gaddvent";
+		parameters[] =
+		{
+			"SCALAR"
+		};
+	};
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	class weWishYouAMerryXmas
+	{
+		name		= "Merry Xmas and a Happy New Year";
+		sound[]		= { "custom\GADDvent\Music\weWishYouAMerryXmas.ogg", 0.5, 1, 100 };
+		titles[]	= { 0, "" };
+	};
+	class Fairytale
+	{
+		name		= "Fairytale of New York";
+		sound[]		= { "custom\GADDvent\Music\Fairytale.ogg", 0.5, 1, 100 };
+		titles[]	= { 0, "" };
+	};
+	class HappyXmas
+	{
+		name		= "Happy Christmas";
+		sound[]		= { "custom\GADDvent\Music\HappyXmas.ogg", 0.5, 1, 100 };
+		titles[]	= { 0, "" };
+	};
+	class JingleBellRock
+	{
+		name		= "Jingle bell rock";
+		sound[]		= { "custom\GADDvent\Music\JingleBellRock.ogg", 0.5, 1, 100 };
+		titles[]	= { 0, "" };
+	};
+	class JingleBells
+	{
+		name		= "Jingle Bells Adam Kadmon smells infinity got shut down";
+		sound[]		= { "custom\GADDvent\Music\JingleBells.ogg", 0.5, 1, 100 };
+		titles[]	= { 0, "" };
+	};
+	class LetItSnow
+	{
+		name		= "Let it snow";
+		sound[]		= { "custom\GADDvent\Music\LetItSnow.ogg", 0.5, 1, 100 };
+		titles[]	= { 0, "" };
+	};
+	class LookLikeXmas
+	{
+		name		= "Look a lot like xmas";
+		sound[]		= { "custom\GADDvent\Music\LookLikeXmas.ogg", 0.5, 1, 100 };
+		titles[]	= { 0, "" };
+	};
+	class Rudolph
+	{
+		name		= "Rudolph the cunty reindeer";
+		sound[]		= { "custom\GADDvent\Music\Rudolph.ogg", 0.5, 1, 100 };
+		titles[]	= { 0, "" };
+	};
+};
