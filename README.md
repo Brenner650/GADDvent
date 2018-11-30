@@ -15,3 +15,5 @@ GADDvent calendars for Christmas
 10. Visit the office trader and claim your gifts.
 
 ### Any issues, please visit my discord and tell me about them. I will help. http://discord.gamingatdeathsdoor.com
+
+License only applied to my work. The music included is NOT mine and all credit goes to their original authors and creators. All music content is supplied for free as they are found on YouTube. All royalties go to their respective label companies.
