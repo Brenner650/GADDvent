@@ -6,6 +6,7 @@ _uid = getPlayerUID player;
 _dayOfXmas = ExileServerStartTime select 2;
 _pinRandom = (1000 +(round (random 8999)));
 _pin = format ["%1", _pinRandom];
+_serverName = "Gaming At Death's Door";
 
 if (isNil "GADDventNumber") then
 {
@@ -118,13 +119,29 @@ if (_GADDventNumber < _dayOfXmas) then
 {
 	if (_isVehicle) then
 	{
-		["spawnGADDventVehicleRequest", [_selectedGift,_pin]] call ExileClient_system_network_send;
-		["SuccessTitleAndText", ["GADDvent Calendar", format ["You have claimed your GADDvent gift for Today! Come back again tomorrow to claim another! Enjoy the ride! PIN: %1", _pin]]] call ExileClient_gui_toaster_addTemplateToast;
+		if (_dayOfXmas == 25) then 
+		{
+			["spawnGADDventVehicleRequest", [_selectedGift,_pin]] call ExileClient_system_network_send;
+			["SuccessTitleAndText", ["GADDvent Calendar", format ["MERRY CHRISTMAS! Thank you for playing %1! Enjoy the ride! PIN: %2", _serverName, _pin]]] call ExileClient_gui_toaster_addTemplateToast;
+		}
+		else
+		{
+			["spawnGADDventVehicleRequest", [_selectedGift,_pin]] call ExileClient_system_network_send;
+			["SuccessTitleAndText", ["GADDvent Calendar", format ["You have claimed your GADDvent gift for Today! Come back again tomorrow to claim another! Enjoy the ride! PIN: %1", _pin]]] call ExileClient_gui_toaster_addTemplateToast;
+		};
 	}
 	else
 	{
-		unitBackpack player addItemCargoGlobal [_selectedGift, 1];
-		["SuccessTitleAndText", ["GADDvent Calendar", "You just claimed a GADDvent Gift! Check your Backpack! Come back again tomorrow to claim your next gift!"]] call ExileClient_gui_toaster_addTemplateToast;
+		if (_dayOfXmas == 25) then
+		{
+			unitBackpack player addItemCargoGlobal [_selectedGift, 1];
+			["SuccessTitleAndText", ["GADDvent Calendar", format ["MERRY CHRISTMAS! Thank you for playing %1! Check your Backpack!", _serverName]]] call ExileClient_gui_toaster_addTemplateToast;
+		}
+		else
+		{
+			unitBackpack player addItemCargoGlobal [_selectedGift, 1];
+			["SuccessTitleAndText", ["GADDvent Calendar", "You just claimed a GADDvent Gift! Check your Backpack! Come back again tomorrow to claim your next gift!"]] call ExileClient_gui_toaster_addTemplateToast;
+		};
 	};
 };
 
