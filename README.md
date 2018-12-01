@@ -10,7 +10,7 @@ GADDvent calendars for Christmas
 5. Copy the .pbo from there into your @ExileServer\addons folder.
 6. Merge my Exile.ini into yours. Please either chose the 32 or 64 bit version.
 7. Run the GADDvent.sql code on your database as a query.
-8. Edit the file "ClaimGift.sqf" in the mission files to change the gifts given on Advent and Christmas day.
+8. Edit the file "ClaimGift.sqf" in the mission files to change the gifts given on Advent and Christmas day and also change the _serverName to your server.
 9. Start the server.
 10. Visit the office trader and claim your gifts.
 
